@@ -1,0 +1,23 @@
+{
+    "name": "alan/swoft-opentracing",
+    "description": "swoft framwork using opentracing",
+    "type": "library",
+    "authors": [
+        {
+            "name": "alan",
+            "email": "alan.wang@wetax.com.cn"
+        }
+    ],
+    "require": {
+        "swoft/swoft": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {"swoft\\opentracing\\": "src/"}
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    ]
+}
