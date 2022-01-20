@@ -48,6 +48,32 @@ JAEGER_REPORTING_PORT=16832
   'driver'        => 'phpredis'
 ],
 ```
+5. 编写中间件
+
+```php
+<?php
+  
+namespace App\Http\Middleware;
+
+use Psr\Http\Server\MiddlewareInterface;
+use Swoft\Bean\Annotation\Mapping\Bean;
+use swoft\opentracing\Middleware\TracingMiddlewareTrait;
+
+
+/**
+ * Class TracingMiddleware
+ * @package App\Http\Middleware
+ *
+ * @Bean()
+ */
+class TracingMiddleware implements MiddlewareInterface
+{
+    use TracingMiddlewareTrait;
+}
+```
+
+   
+
 5. 配置中间件
 
 ```php
